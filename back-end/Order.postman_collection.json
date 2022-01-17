@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "63108a11-0f40-44eb-956a-f5f1d5481187",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2N1c3RvbWVyIiwiY29kZSI6IktIMDAwMSJ9.Pv3Fy62mz5ATIZMe0RSYtrD5weKEmzuVcXlx6S4JutZMXj0SUz2_77zTj7vRb0xB",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shipMoney\":\"10000\",\r\n    \"codMoney\":\"40000\",\r\n    \"weight\":\"1.2\",\r\n    \"receiver\":{\r\n        \"fullName\":\"5 pick lan 1\",\r\n        \"phoneNumber\":\"0123456789\",\r\n        \"addressInfo\":{\r\n            \"area\":\"HAI_BA_TRUNG\",\r\n            \"address\":\"201 Hai ba trung\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2Nvb3JkaW5hdG9yIiwiY29kZSI6Ik5WMDAwMiJ9.DqDnF8OtFIYcM3JB5_0q1qij5uBzcq0Batp8OBcPdG0jQo0a1sFjjG2lYpWWRkMP",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderStatus\":\"DELIVER_SUCCESS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/:code/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":code",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "OR00003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "OR00002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Order With Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders_with_status/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders_with_status",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "OR00009"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2Nvb3JkaW5hdG9yIiwiY29kZSI6Ik5WMDAwMiJ9.DqDnF8OtFIYcM3JB5_0q1qij5uBzcq0Batp8OBcPdG0jQo0a1sFjjG2lYpWWRkMP",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shipMoney\":\"10000\",\r\n    \"weight\":\"1.2\",\r\n    \"codMoney\":\"200000\",\r\n    \"receiver\":{\r\n        \"fullName\":\"Le Thu Phuong\",\r\n        \"phoneNumber\":\"0123456789\",\r\n        \"addressInfo\":{\r\n            \"area\":\"HAI_BA_TRUNG\",\r\n            \"address\":\"201 Hai ba trung\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/:code/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":code",
+						"orders"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "KH0002"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

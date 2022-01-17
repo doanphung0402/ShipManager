@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "a88bd19a-e167-4338-9122-030d79994fc9",
+		"name": "TestAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assign deliver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/:order_code/deliver/:shipper_code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_code",
+						"deliver",
+						":shipper_code"
+					],
+					"variable": [
+						{
+							"key": "order_code",
+							"value": "OR00001"
+						},
+						{
+							"key": "shipper_code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign pick up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/:order_code/pickup/:shipper_code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_code",
+						"pickup",
+						":shipper_code"
+					],
+					"variable": [
+						{
+							"key": "order_code",
+							"value": "OR00001"
+						},
+						{
+							"key": "shipper_code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign return",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/:order_code/return/:shipper_code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_code",
+						"return",
+						":shipper_code"
+					],
+					"variable": [
+						{
+							"key": "order_code",
+							"value": "OR00002"
+						},
+						{
+							"key": "shipper_code",
+							"value": "NV0005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All candidates for pickup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/candidates/for-pickup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"for-pickup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All candidates for deliver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/candidates/for-deliver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"for-deliver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All candidates for return",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/candidates/for-return",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"for-return"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "d440aecb-e971-46f4-980a-bad517a9cb6a",
+		"name": "Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"123456\",\r\n    \"body\": {\r\n        \"phoneNumber\":\"0123456789\",\r\n        \"fullName\":\"Nguyen Thi Hanh\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as admin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login-for-employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login-for-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as accountant",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "account",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login-for-employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login-for-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as coordinator",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "coord",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login-for-employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login-for-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as Shipper",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "shipper2",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login-for-employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login-for-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new coordinator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAxIiwiYXV0aG9yaXR5IjoiUk9MRV9hZG1pbiJ9.jhXMAqHXBInnf18UX_rufXD_v7HWmv7h_WK51VMdvzAz7GBCs7hfSoOpFx5UDyVQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"coord\",\r\n    \"password\":\"123456\",\r\n    \"body\": {\r\n        \"phoneNumber\":\"0123456789\",\r\n        \"fullName\":\"Nguyen Thi Chu\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/coordinators",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coordinators"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new accoutant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAxIiwiYXV0aG9yaXR5IjoiUk9MRV9hZG1pbiJ9.jhXMAqHXBInnf18UX_rufXD_v7HWmv7h_WK51VMdvzAz7GBCs7hfSoOpFx5UDyVQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"account\",\r\n    \"password\":\"123456\",\r\n    \"body\": {\r\n        \"phoneNumber\":\"0123456789\",\r\n        \"fullName\":\"Nguyen Thi Kinh\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accountants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accountants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new shipper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAxIiwiYXV0aG9yaXR5IjoiUk9MRV9hZG1pbiJ9.jhXMAqHXBInnf18UX_rufXD_v7HWmv7h_WK51VMdvzAz7GBCs7hfSoOpFx5UDyVQ",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shipper1\",\r\n    \"password\": \"123456\",\r\n    \"body\": {\r\n        \"fullName\": \"Do Thuy Linh\",\r\n        \"phoneNumber\": \"0379557009\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shippers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shippers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new shipper Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAxIiwiYXV0aG9yaXR5IjoiUk9MRV9hZG1pbiJ9.jhXMAqHXBInnf18UX_rufXD_v7HWmv7h_WK51VMdvzAz7GBCs7hfSoOpFx5UDyVQ",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shipper2\",\r\n    \"password\": \"123456\",\r\n    \"body\": {\r\n        \"fullName\": \"Hoang Thuy Linh\",\r\n        \"phoneNumber\": \"0379557009\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shippers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shippers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lock Employee account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAyIiwiYXV0aG9yaXR5IjoiUk9MRV9jb29yZGluYXRvciJ9.mWzhrnxOzoCmMXn-mtu7tG7feaKWktWgmE2viXwxG_iOGlHp38IO_xzo8aaatv_9",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/:code/locked",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						":code",
+						"locked"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlock Employee account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDAzIiwiYXV0aG9yaXR5IjoiUk9MRV9hY2NvdW50YW50In0.ahxuH0g2V1QGf5HMijCqdtaRdQyrfzqAoE7MfNOXF7JX_o_NsR7FqV5W17OoNdyO",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/:code/normal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						":code",
+						"normal"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2Nvb3JkaW5hdG9yIiwiY29kZSI6Ik5WMDAwMiJ9.DqDnF8OtFIYcM3JB5_0q1qij5uBzcq0Batp8OBcPdG0jQo0a1sFjjG2lYpWWRkMP",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": \"012345678911\",\r\n    \"fullName\": \"Tran Khanh Tong\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee's details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "NV0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX3NoaXBwZXIiLCJjb2RlIjoiTlYwMDA1In0.SHGcO8Drb9XNH6Zc2mHCRyetEuZNVDrNEDlcd3fQb4Xlo_zcA-GeA2tSn4PGKyJE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

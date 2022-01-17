@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "a0e81139-0678-402f-ac9b-69d3616f5644",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2FkbWluIiwiY29kZSI6Ik5WMDAwMSJ9.4YIcic3NPRsfjJw9DOA_LXhcQFT6zMxppU7aWgHUyiY4mXCIw6kzXMzQQjBGPMf4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456\",\r\n    \"phoneNumber\":\"0379557008\",\r\n    \"body\":{\r\n        \"taxCode\":\"0317042457\",\r\n        \"email\":\"kientink26@gmail.com\",\r\n        \"fullName\":\"Pham Trung Kien\",\r\n        \"addressInfo\":{\r\n            \"address\":\"81 Hoang mai\",\r\n            \"area\":\"HOANG_MAI\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as Customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "0379557008",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login-for-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login-for-customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer's details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2FjY291bnRhbnQiLCJ1c2VybmFtZSI6ImFjY291bnQifQ.59KAYtKUnEJQetcz0A4ROVX_wMiQJflGCsyL8-yvwHOhxdXKPdXERZO7F1RacOnD",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customers/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "KH0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2N1c3RvbWVyIiwiY29kZSI6IktIMDAwMSJ9.Pv3Fy62mz5ATIZMe0RSYtrD5weKEmzuVcXlx6S4JutZMXj0SUz2_77zTj7vRb0xB",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lock Customer account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/:code/locked",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":code",
+						"locked"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "KH0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlock Customer account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/:code/normal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":code",
+						"normal"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "KH0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2FkbWluIiwiY29kZSI6Ik5WMDAwMSJ9.4YIcic3NPRsfjJw9DOA_LXhcQFT6zMxppU7aWgHUyiY4mXCIw6kzXMzQQjBGPMf4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Pham Trung Kien\",\r\n    \"email\": \"kientink26@gmail.com\",\r\n    \"taxCode\": \"0317042458\",\r\n    \"addressInfo\": {\r\n        \"address\": \"169/78\",\r\n        \"area\": \"HOANG_MAI\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "KH0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update my account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2N1c3RvbWVyIiwiY29kZSI6IktIMDAwMSJ9.Pv3Fy62mz5ATIZMe0RSYtrD5weKEmzuVcXlx6S4JutZMXj0SUz2_77zTj7vRb0xB",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Pham Kien Quoc\",\r\n    \"email\": \"kientink27@gmail.com\",\r\n    \"taxCode\": \"0317042458\",\r\n    \"addressInfo\": {\r\n        \"address\": \"169/78\",\r\n        \"area\": \"HOANG_MAI\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all my orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdHkiOiJST0xFX2N1c3RvbWVyIiwiY29kZSI6IktIMDAwMiJ9.r1FiHVWk3Fs2q9pLltT6pJamI5M-hNL2F6fLMzs6gVmHSOaeIMX3r_MvomBZHoOs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customer/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

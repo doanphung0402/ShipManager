@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "d83b192f-a010-4f48-973c-b67ef05d80cf",
+		"name": "Shipper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all shippers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shippers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shippers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my pickups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDA1IiwiYXV0aG9yaXR5IjoiUk9MRV9zaGlwcGVyIn0.R3hzhTfyCWMyoJB_CxfpB97zhBH4Pn6Ne7yVi3zQWkIbQ7CPHFKBFLuS8DFF40kL",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/shipper/pickups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipper",
+						"pickups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my delivers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDA0IiwiYXV0aG9yaXR5IjoiUk9MRV9zaGlwcGVyIn0.jEgOkQDwyC_Ks_jyi9gT7e-ZJA5bcTUmsXNZVfzU9Vaj5fe9SgaDiP9cf7H2qjyf",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/shipper/delivers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipper",
+						"delivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my return",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RlIjoiTlYwMDA1IiwiYXV0aG9yaXR5IjoiUk9MRV9zaGlwcGVyIn0.R3hzhTfyCWMyoJB_CxfpB97zhBH4Pn6Ne7yVi3zQWkIbQ7CPHFKBFLuS8DFF40kL",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/shipper/returns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipper",
+						"returns"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
