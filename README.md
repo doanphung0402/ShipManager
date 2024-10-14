@@ -1,7 +1,23 @@
-# pre06-team-qlgh
 
-Quản lý giao hàng
+# QLDH 
 
-# Lên kế hoạch cho dự án: 
+Web application quản lí giao hàng , tạo đơn hàng cho người dùng , quản lí trạng thái đơn hàng cho user,shipper,admin  
 
-https://docs.google.com/spreadsheets/d/1L4GEt8L-69pN7vAlUhJniI9bVkMbv3U1eox8S6bf_8Y/edit#gid=1115838130 
+
+## Installation
+
+Install ShipManagement with npm
+
+```bash
+  cd backend/
+  cd fontend/ 
+  npm install 
+  npm start 
+```
+    
+## Tech Stack
+
+**Client:** React, Redux, TailwindCSS, Material UI  
+
+**Server:** Spring Framework , Mysql 
+
